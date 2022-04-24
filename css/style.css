@@ -1,0 +1,23 @@
+
+form[name="create"]{
+    width: 250px;
+    padding: 10px;
+    background-color: rgba(197,197,197,0.7);
+    border-radius: 5px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form[name="create"] label{
+    display: block;
+    padding: 5px 0;
+}
+
+#all table{
+    width: 100%;
+}
+#all table,#all td, #all th{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
