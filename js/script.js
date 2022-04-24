@@ -15,5 +15,6 @@ console.log(ul);
 for (let value of links ){
     ul.innerHTML+=`<li>${value}</li>`;
 }
+let x = 5;
 
 
