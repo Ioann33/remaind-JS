@@ -1,20 +1,41 @@
-
-let content = document.getElementById('content');
-
-let someText = 'ON DUPLICATE KEY UPDATE id=LAST_INSERT_ID(id), c=3; This does not work if http://nothing+changes , presumably because MySQL doesnt run the https://dummy=update , You have been automatically logged out due to http://inactivity+of=1440= seconds . Once you log in again, you https://should be able to resume the work where you left off.'
-
-content.innerText = someText;
-
-let arrayText = someText.split(" ");
-let links = arrayText.filter(function (val, i, arr) {
-    return val.startsWith('http://') || val.startsWith('https://');
-});
-
-let ul = document.querySelector('ul');
-console.log(ul);
-for (let value of links ){
-    ul.innerHTML+=`<li>${value}</li>`;
+let human = {
+    name: 'vasya',
+    secondName: 'pupko',
+    child: {
+        name: 'kolya',
+        secondName: 'pupko',
+        car: {
+            brand: 'hyundai',
+            model: 'tucson',
+        },
+        child: {
+            name: 'olya',
+            secondName: 'zubko',
+            child: {
+                name: 'aleg',
+                secondName: 'zubko',
+                bike: {
+                    brand: 'harley',
+                    model: 'fat boy',
+                },
+                child: {
+                    name: 'natasha',
+                    secondName: 'sapko',
+                }
+            }
+        }
+    }
 }
-let x = 5;
 
+function description(obj) {
+    let result = '';
+    for (let key in obj){
+        if (typeof obj[key] === 'object'){
 
+        }
+        result += `${key} : ${obj[key]}\n`;
+    }
+    return result;
+}
+
+alert(description(human));
