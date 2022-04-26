@@ -27,11 +27,14 @@ let human = {
     }
 }
 
-function description(obj) {
+function description(obj, prefix = '') {
     let result = '';
+
     for (let key in obj){
+        result+= prefix;
         if (typeof obj[key] === 'object'){
-            result += `${key} : \n ${description(obj[key])}`;
+
+            result += `${key} : \n ${description(obj[key], prefix+'-')}`;
         }else {
             result += `${key} : ${obj[key]}\n`;
         }
