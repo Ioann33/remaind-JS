@@ -31,9 +31,11 @@ function description(obj) {
     let result = '';
     for (let key in obj){
         if (typeof obj[key] === 'object'){
-
+            result += `${key} : \n ${description(obj[key])}`;
+        }else {
+            result += `${key} : ${obj[key]}\n`;
         }
-        result += `${key} : ${obj[key]}\n`;
+
     }
     return result;
 }
